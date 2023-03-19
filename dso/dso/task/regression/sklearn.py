@@ -19,11 +19,11 @@ class DeepSymbolicRegressor(DeepSymbolicOptimizer,
             }
         DeepSymbolicOptimizer.__init__(self, config)
 
-    def fit(self, X, y):
+    def fit(self, X, , X_test, y_test):
 
         # Update the Task
         config = deepcopy(self.config)
-        config["task"]["dataset"] = (X, y)
+        config["task"]["dataset"] = (X, y, X_test, y_test)
 
         # Turn off file saving
         config["experiment"]["logdir"] = None
