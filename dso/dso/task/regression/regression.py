@@ -116,6 +116,8 @@ class RegressionTask(HierarchicalTask):
         elif isinstance(dataset, tuple):
             self.X_train = dataset[0]
             self.y_train = dataset[1]
+            self.X_test = dataset[2]
+            self.y_test = dataset[3]
             self.name = "regression"
 
         # If not specified, set test data equal to the training data
