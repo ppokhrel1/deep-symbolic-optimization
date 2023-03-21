@@ -19,7 +19,7 @@ class DeepSymbolicRegressor(DeepSymbolicOptimizer,
             }
         DeepSymbolicOptimizer.__init__(self, config)
 
-    def fit(self, X, , X_test, y_test):
+    def fit(self, X, X_test, y_test):
 
         # Update the Task
         config = deepcopy(self.config)
