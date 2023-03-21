@@ -118,6 +118,7 @@ class RegressionTask(HierarchicalTask):
             self.y_train = dataset[1]
             self.X_test = dataset[2]
             self.y_test = dataset[3]
+            self.y_test_noiseless = self.y_test
             self.name = "regression"
 
         # If not specified, set test data equal to the training data
